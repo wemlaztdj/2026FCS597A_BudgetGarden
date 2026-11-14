@@ -25,14 +25,18 @@
         </activity>
 
         <activity
-            android:name=".DatabaseTestActivity"
-            android:exported="false"
-            android:label="Database Test"
-            android:theme="@style/Theme.GardenBudgetTest" />
-
-        <activity
             android:name=".CreatePlantGoalActivity"
             android:exported="false" />
+
+<!--Database add sample and reset-->
+<!--        <activity-->
+<!--            android:name=".examples.DatabaseExampleActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
 
     </application>
 
