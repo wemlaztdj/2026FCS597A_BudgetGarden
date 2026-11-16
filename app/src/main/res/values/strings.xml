@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Budget Garden</string>
     <string name="home">Home</string>
-    <string name="take_out">Take Out Funds</string>
+    <string name="take_out">Spend Funds</string>
     <string name="your_garden">Your Garden</string>
     <string name="fund_details">Fund Details</string>
     <string name="overall_funds">Overall funds</string>
@@ -56,6 +56,36 @@
     <string name="goal_amount_placeholder">0.00</string>
     <string name="goal_description_placeholder">What are you saving for?</string>
     <string name="goal_target_date_label">Target date</string>
+    <string name="goal_add_funds">Add funds</string>
+    <string name="goal_add_funds_title">Add funds to %1$s</string>
+    <string name="goal_add_funds_hint">Amount (e.g. 25.00)</string>
+    <string name="goal_add_funds_confirm">Add</string>
+    <string name="goal_add_funds_invalid">Enter an amount above $0 with up to 2 decimal places.</string>
+    <string name="goal_add_funds_insufficient">Not enough money in your Wallet.</string>
+    <string name="goal_add_funds_success">Funds added!</string>
+    <string name="goal_add_funds_failed">Could not add funds. Please try again.</string>
+    <string name="goal_add_funds_reached_button">Goal reached</string>
+    <string name="goal_add_funds_reached_message">This goal has already reached its target.</string>
+    <string name="goal_take_out">Take out funds</string>
+    <string name="goal_take_out_title">Take out funds from %1$s</string>
+    <string name="goal_take_out_confirm">Take out</string>
+    <string name="goal_take_out_empty_button">Nothing to take out</string>
+    <string name="goal_take_out_exceeds">You can take out at most %1$s from this goal.</string>
+    <string name="goal_take_out_success">Funds returned to your Wallet.</string>
+    <string name="spend_source_label">Spend from</string>
+    <string name="spend_leftover_option">Leftover funds</string>
+    <string name="spend_amount_label">Amount</string>
+    <string name="spend_amount_hint">e.g. 25.00</string>
+    <string name="spend_memo_label">What was it for? (optional)</string>
+    <string name="spend_memo_hint">e.g. Lunch</string>
+    <string name="spend_submit">Spend</string>
+    <string name="spend_default_memo">Spent funds</string>
+    <string name="spend_success">Spending recorded.</string>
+    <string name="spend_not_enough">You can spend at most %1$s from this source.</string>
+    <string name="spend_load_failed">Could not load your funds.</string>
+    <string name="goal_spend">Spend</string>
+    <string name="goal_spend_title">Spend from %1$s</string>
+    <string name="goal_spend_empty_button">Nothing to spend</string>
     <string name="goal_modify">Edit Goal</string>
     <string name="goal_archive">Archive Goal</string>
     <string name="goal_modify_description">Update your plant\'s details or archive it when you no longer need it.</string>
@@ -67,5 +97,4 @@
     <string name="edit_current_balance_format">Current balance: %1$s</string>
     <string name="x2039">‹</string>
     <string name="x203a">›</string>
-
 </resources>
