@@ -168,17 +168,17 @@
                 style="@style/GardenGoalSecondaryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginEnd="6dp"
+                android:layout_weight="1"
                 android:text="@string/cancel_goal_creation" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/archive_budget_button"
                 style="@style/GardenGoalSecondaryButton"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:layout_weight="0.2"
+                android:layout_weight="0.382"
                 android:text="@string/archive_budget"
                 android:textColor="#B3261E" />
 
