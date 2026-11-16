@@ -1,29 +1,55 @@
 package edu.stevens.cs597.budgetgarden
 
+import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import java.math.BigDecimal
 import java.text.NumberFormat
 import java.util.Locale
+import android.widget.Button
 
 class GardenPage(
     private val root: View,
     private val gardenApp: GardenBudgetApp,
     private val scope: CoroutineScope
 ) {
+    private var navigate: (String) -> Unit = {}
     fun bind(onNavigate: (String) -> Unit) {
-        val container = root.findViewById<LinearLayout>(R.id.garden_container)
-        val status = root.findViewById<TextView>(R.id.garden_status_text)
+        navigate = onNavigate
         root.findViewById<View>(R.id.garden_create_goal_button).setOnClickListener {
             onNavigate("create_goal")
         }
+//        // test amount of $1000
+//        scope.launch {
+//            gardenApp.awaitDatabaseReady()
+//            val walletId = gardenApp.dao.getBudgets().first { it.type == "WALLET" }.id
+//            if (gardenApp.dao.balanceAt(walletId, System.currentTimeMillis()) == 0L) {
+//                gardenApp.repository.addTransaction(
+//                    fromId = null,
+//                    toId = walletId,
+//                    amount = 100000L, // $1,000.00
+//                    postDate = System.currentTimeMillis(),
+//                    memo = "Test income"
+//                )
+//            }
+//        }
+
+        loadGarden()
+    }
+
+    private fun loadGarden() {
+        val container = root.findViewById<LinearLayout>(R.id.garden_container)
+        val status = root.findViewById<TextView>(R.id.garden_status_text)
 
         scope.launch {
             try {
@@ -52,6 +78,17 @@ class GardenPage(
                             currency.format(BigDecimal.valueOf(balance, 2)),
                             currency.format(BigDecimal.valueOf(budget.goalAmount, 2))
                         )
+
+                    val addFundsButton = row.findViewById<Button>(R.id.add_funds_button)
+                    if (balance >= budget.goalAmount) {
+                        addFundsButton.isEnabled = false
+                        addFundsButton.setText(R.string.goal_add_funds_reached_button)
+                    } else {
+                        addFundsButton.setOnClickListener {
+                            showAddFundsDialog(budget.id, budget.name)
+                        }
+                    }
+
                     container.addView(row)
                 }
 
@@ -65,6 +102,91 @@ class GardenPage(
                 status.setText(R.string.garden_load_failed)
                 status.visibility = View.VISIBLE
             }
+        }
+    }
+
+    private fun showAddFundsDialog(goalId: Long, goalName: String) {
+        val context = root.context
+        val input = EditText(context).apply {
+            inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+            hint = context.getString(R.string.goal_add_funds_hint)
+        }
+
+        AlertDialog.Builder(context)
+            .setTitle(context.getString(R.string.goal_add_funds_title, goalName))
+            .setView(input)
+            .setPositiveButton(R.string.goal_add_funds_confirm) { _, _ ->
+                val cents = parseCents(input.text.toString().trim())
+                if (cents == null) {
+                    Toast.makeText(
+                        context, R.string.goal_add_funds_invalid, Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    addFunds(goalId, cents)
+                }
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun addFunds(goalId: Long, cents: Long) {
+        val context = root.context
+
+        scope.launch {
+            try {
+                gardenApp.awaitDatabaseReady()
+                val dao = gardenApp.dao
+                val now = System.currentTimeMillis()
+
+                val walletId = dao.getBudgets()
+                    .firstOrNull { it.type == "WALLET" && !it.isArchived }
+                    ?.id
+                if (walletId == null) {
+                    Toast.makeText(
+                        context, R.string.goal_add_funds_failed, Toast.LENGTH_LONG
+                    ).show()
+                    return@launch
+                }
+
+                if (dao.balanceAt(walletId, now) < cents) {
+                    Toast.makeText(
+                        context, R.string.goal_add_funds_insufficient, Toast.LENGTH_LONG
+                    ).show()
+                    return@launch
+                }
+
+                gardenApp.repository.addTransaction(
+                    fromId = walletId,
+                    toId = goalId,
+                    amount = cents,
+                    postDate = now,
+                    memo = "Added funds to savings goal"
+                )
+
+                Toast.makeText(
+                    context, R.string.goal_add_funds_success, Toast.LENGTH_SHORT
+                ).show()
+                navigate("home")
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.e("GardenPage", "Could not add funds", e)
+                Toast.makeText(
+                    context, R.string.goal_add_funds_failed, Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+    }
+
+    private fun parseCents(raw: String): Long? {
+        if (!raw.matches(Regex("""[0-9]+(\.[0-9]{1,2})?"""))) {
+            return null
+        }
+        return try {
+            BigDecimal(raw).movePointRight(2).longValueExact()
+                .takeIf { it > 0L }
+        } catch (_: ArithmeticException) {
+            null
         }
     }
 }
