@@ -111,7 +111,7 @@
                     android:layout_width="52dp"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/previous_plant"
-                    android:text="&#x2039;" />
+                    android:text="@string/x2039" />
 
                 <ImageView
                     android:id="@+id/edit_plant_preview"
@@ -130,7 +130,7 @@
                     android:layout_width="52dp"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/next_plant"
-                    android:text="&#x203A;" />
+                    android:text="@string/x203a" />
             </LinearLayout>
 
             <TextView
@@ -177,8 +177,8 @@
                 style="@style/GardenGoalSecondaryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="6dp"
+                android:layout_weight="0.2"
                 android:text="@string/archive_budget"
                 android:textColor="#B3261E" />
 

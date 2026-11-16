@@ -67,10 +67,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Add testing page.">
+    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Shorten archive button text and layout weight&#10;&#10;Updated archive-related strings to be more concise and adjusted the archive button's layout weight in the edit budget page.">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_create_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_create_goal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +266,9 @@
     <MESSAGE value="First commint" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Add testing page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add testing page." />
+    <MESSAGE value="Handle back navigation and state for edit budget&#10;&#10;Updated MainActivity to preserve selectedBudgetId across configuration changes and configure the back press handler to return to the garden page from the edit budget view." />
+    <MESSAGE value="Shorten archive button text and layout weight&#10;&#10;Updated archive-related strings to be more concise and adjusted the archive button's layout weight in the edit budget page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Shorten archive button text and layout weight&#10;&#10;Updated archive-related strings to be more concise and adjusted the archive button's layout weight in the edit budget page." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
