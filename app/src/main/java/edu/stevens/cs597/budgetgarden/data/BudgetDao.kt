@@ -96,6 +96,24 @@ interface BudgetDao {
     suspend fun allPostDates(): List<Long>
 
     @Query("""
+    SELECT
+        t.id AS id,
+        fb.name AS fromName,
+        tb.name AS toName,
+        t.amount AS amount,
+        t.post_date AS postDate,
+        t.memo AS memo
+    FROM transactions t
+    LEFT JOIN budgets fb
+        ON fb.id = t.from_budget_id
+    LEFT JOIN budgets tb
+        ON tb.id = t.to_budget_id
+    WHERE t.post_date > :now
+    ORDER BY t.post_date ASC, t.id ASC
+    LIMIT 100
+""")
+    suspend fun upcomingTransactions(now: Long): List<TransactionRow>
+    @Query("""
         SELECT t.id AS id,
                fb.name AS fromName,
                tb.name AS toName,
@@ -109,4 +127,22 @@ interface BudgetDao {
         LIMIT 100
     """)
     suspend fun recentTransactions(): List<TransactionRow>
+    @Query("""
+    SELECT
+        t.id AS id,
+        fb.name AS fromName,
+        tb.name AS toName,
+        t.amount AS amount,
+        t.post_date AS postDate,
+        t.memo AS memo
+    FROM transactions t
+    LEFT JOIN budgets fb
+        ON fb.id = t.from_budget_id
+    LEFT JOIN budgets tb
+        ON tb.id = t.to_budget_id
+    WHERE t.post_date <= :now
+    ORDER BY t.post_date DESC, t.id DESC
+    LIMIT 100
+""")
+    suspend fun postedTransactions(now: Long): List<TransactionRow>
 }
