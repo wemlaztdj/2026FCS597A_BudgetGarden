@@ -1,4 +1,4 @@
-# [DRAFT]high-fidelity prototype of a budgeting mobile app
+# High-Fidelity Prototype of Budgeting App 
 ## Overview
 Budget Garden
 
