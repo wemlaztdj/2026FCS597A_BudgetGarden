@@ -45,10 +45,17 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.garden_button).setOnClickListener { showPage("garden") }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (currentPage != "home") showPage("home") else finish()
+                when (currentPage) {
+                    "edit_budget" -> showPage("garden")
+                    "home" -> finish()
+                    else -> showPage("home")
+                }
             }
         })
         currentPage = savedInstanceState?.getString("page") ?: "home"
+        selectedBudgetId = savedInstanceState
+            ?.takeIf { it.containsKey("selectedBudgetId") }
+            ?.getLong("selectedBudgetId")
         showPage(currentPage)
     }
 
@@ -114,6 +121,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putString("page", currentPage)
+        selectedBudgetId?.let {
+            outState.putLong("selectedBudgetId", it)
+        }
         super.onSaveInstanceState(outState)
     }
 }

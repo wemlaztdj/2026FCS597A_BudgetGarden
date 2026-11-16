@@ -67,16 +67,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/EditBudgetPage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Add testing page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/data/BudgetRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/data/BudgetRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +263,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commint" />
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Add testing page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add testing page." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
