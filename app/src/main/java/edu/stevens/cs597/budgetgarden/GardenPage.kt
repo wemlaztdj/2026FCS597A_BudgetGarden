@@ -33,19 +33,19 @@ class GardenPage(
             onNavigate("create_goal")
         }
         // test amount of $1000
-        scope.launch {
-            gardenApp.awaitDatabaseReady()
-            val walletId = gardenApp.dao.getBudgets().first { it.type == "WALLET" }.id
-            if (gardenApp.dao.balanceAt(walletId, System.currentTimeMillis()) == 0L) {
-                gardenApp.repository.addTransaction(
-                    fromId = null,
-                    toId = walletId,
-                    amount = 100000L, // $1,000.00
-                    postDate = System.currentTimeMillis(),
-                    memo = "Test income"
-                )
-            }
-        }
+//        scope.launch {
+//            gardenApp.awaitDatabaseReady()
+//            val walletId = gardenApp.dao.getBudgets().first { it.type == "WALLET" }.id
+//            if (gardenApp.dao.balanceAt(walletId, System.currentTimeMillis()) == 0L) {
+//                gardenApp.repository.addTransaction(
+//                    fromId = null,
+//                    toId = walletId,
+//                    amount = 100000L, // $1,000.00
+//                    postDate = System.currentTimeMillis(),
+//                    memo = "Test income"
+//                )
+//            }
+//        }
 
         loadGarden()
     }
