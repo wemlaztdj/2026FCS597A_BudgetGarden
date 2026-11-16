@@ -95,6 +95,16 @@ class MainActivity : AppCompatActivity() {
                 scope,
                 lifecycle
             ).bind(::showPage)
+            "water" -> WaterDeliveryPage(
+                pageView,
+                gardenApp,
+                scope
+            ).bind()
+            "details" -> RecentTransactionsPage(
+                pageView,
+                gardenApp,
+                scope
+            ).bind()
             "edit_budget" -> selectedBudgetId?.let { budgetId ->
                 EditBudgetPage(
                     pageView, gardenApp, scope, budgetId

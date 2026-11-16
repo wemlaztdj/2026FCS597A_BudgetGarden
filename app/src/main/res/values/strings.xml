@@ -8,8 +8,8 @@
     <string name="sample_total">$1,000.00</string>
     <string name="sample_leftover">$250.00</string>
     <string name="leftover">Leftover funds</string>
-    <string name="view_details">View Fund Details</string>
-    <string name="water_date">Next water delivery: Not scheduled</string>
+    <string name="view_details">Recent Transactions</string>
+<!--    <string name="water_date">Next water delivery: Not scheduled</string>-->
     <string name="tree_description">A growing tree representing your savings</string>
     <string name="flowers">🌻   🌷   🌱   🌺</string>
     <string name="sample_note">Plant preview is a sample.</string>
@@ -17,7 +17,7 @@
     <string name="garden_description">Your budgets and savings goals, all in one garden.</string>
     <string name="details_description">Overall funds: $1,000.00\nLeftover funds: $250.00</string>
     <string name="back_home">Back to Home</string>
-    <string name="next_water_delivery">Next Water Delivery</string>
+    <string name="next_water_delivery">Scheduled Transactions</string>
     <string name="yellow_flower_description">Yellow flower</string>
     <string name="pink_flower_description">Pink flower</string>
     <string name="orange_flower_description">Orange flower</string>
@@ -97,4 +97,17 @@
     <string name="edit_current_balance_format">Current balance: %1$s</string>
     <string name="x2039">‹</string>
     <string name="x203a">›</string>
+    <string name="upcoming_transactions_title">Scheduled Transactions</string>
+    <string name="upcoming_transactions_subtitle">See what\'s coming in and going out of your garden.</string>
+    <string name="upcoming_transactions_heading">Coming Up</string>
+    <string name="upcoming_transactions_loading">Loading upcoming transactions…</string>
+    <string name="upcoming_transactions_empty">No upcoming transactions scheduled.</string>
+    <string name="upcoming_transactions_error">Could not load upcoming transactions.</string>
+    <string name="upcoming_truck_description">Water delivery truck</string>
+    <string name="recent_transactions_title">Recent Transactions</string>
+    <string name="recent_transactions_subtitle">Review money you\'ve received, spent, and transferred.</string>
+    <string name="recent_transactions_heading">Transaction History</string>
+    <string name="recent_transactions_loading">Loading transactions…</string>
+    <string name="recent_transactions_empty">No posted transactions yet.</string>
+    <string name="recent_transactions_error">Could not load recent transactions.</string>
 </resources>

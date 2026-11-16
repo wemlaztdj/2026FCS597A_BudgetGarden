@@ -294,6 +294,72 @@ class DatabaseExampleActivity : AppCompatActivity() {
 
         show("8. Food spending this month: $foodSpent cents\n")
 
+        // ========================================
+        // 8.5. CREATE FUTURE TRANSACTIONS
+        // ========================================
+
+        // Helper: Convert a future date into milliseconds
+        fun futureDate(daysFromNow: Long): Long {
+            return LocalDate.now()
+                .plusDays(daysFromNow)
+                .atTime(12, 0)
+                .atZone(ZoneId.systemDefault())
+                .toInstant()
+                .toEpochMilli()
+        }
+
+        // Example 1: Upcoming paycheck (+$600)
+        repository.addTransaction(
+            fromId = null,
+            toId = walletId,
+            amount = 600_00L,
+            postDate = futureDate(3),
+            memo = "Upcoming Paycheck"
+        )
+
+        // Example 2: Scheduled transfer to Food ($100)
+        repository.addTransaction(
+            fromId = walletId,
+            toId = foodId,
+            amount = 100_00L,
+            postDate = futureDate(4),
+            memo = "Monthly Food Funding"
+        )
+
+        // Example 3: Upcoming grocery expense (-$40)
+        repository.addTransaction(
+            fromId = foodId,
+            toId = null,
+            amount = 40_00L,
+            postDate = futureDate(5),
+            memo = "Grocery Shopping"
+        )
+
+        // Example 4: Upcoming rent payment (-$250)
+        repository.addTransaction(
+            fromId = walletId,
+            toId = null,
+            amount = 250_00L,
+            postDate = futureDate(6),
+            memo = "Rent Payment"
+        )
+
+        show("8.5. Created 4 future transactions\n")
+
+        // Read upcoming transactions
+        val upcoming = dao.upcomingTransactions(
+            System.currentTimeMillis()
+        )
+
+        for (transaction in upcoming) {
+            show(
+                "${transaction.memo}: " +
+                        "${transaction.amount} cents"
+            )
+        }
+
+        show("")
+
 
         // ========================================
         // 9. READ TRANSACTION HISTORY
