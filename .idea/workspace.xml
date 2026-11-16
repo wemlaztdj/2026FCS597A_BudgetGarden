@@ -71,21 +71,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Implemented ability to spend funds from goal/leftover funds from bottom button.">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/RecentTransactionsPage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/TransactionRowRenderer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/WaterDeliveryPage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_transaction.xml" afterDir="false" />
+    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Add scheduled and recent transaction history views&#10;&#10;- Added `upcomingTransactions` and `postedTransactions` queries in `BudgetDao` to fetch future and historical transactions.&#10;- Created `RecentTransactionsPage` and `WaterDeliveryPage` to render recent and scheduled transaction lists.&#10;- Added `TransactionRowRenderer` and `item_transaction.xml` for formatting transaction details and amount color coding.&#10;- Updated `MainActivity` and page layouts to bind and display the new transaction views.">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/data/BudgetDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/data/BudgetDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/examples/DatabaseExampleActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/examples/DatabaseExampleActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_water_delivery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_water_delivery.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +119,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature/transaction_list" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,6 +136,9 @@
     &quot;accountId&quot;: &quot;1dcf2000-a4a5-431a-a5b4-76e61e4d31f3&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
@@ -169,8 +161,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "feature/transaction__list",
-    "git.auto.fetch.suggestion.counter": "1",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "git.auto.fetch.suggestion.counter": "2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kelll/AndroidStudioProjects/2026FCS597-A_Assignment6_kotlin",
     "project.structure.last.edited": "Project",
@@ -282,7 +275,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Implemented ability to add funds" />
     <MESSAGE value="Implemented ability to take out funds on the garden page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented ability to take out funds on the garden page" />
+    <MESSAGE value="Add scheduled and recent transaction history views&#10;&#10;- Added `upcomingTransactions` and `postedTransactions` queries in `BudgetDao` to fetch future and historical transactions.&#10;- Created `RecentTransactionsPage` and `WaterDeliveryPage` to render recent and scheduled transaction lists.&#10;- Added `TransactionRowRenderer` and `item_transaction.xml` for formatting transaction details and amount color coding.&#10;- Updated `MainActivity` and page layouts to bind and display the new transaction views." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scheduled and recent transaction history views&#10;&#10;- Added `upcomingTransactions` and `postedTransactions` queries in `BudgetDao` to fetch future and historical transactions.&#10;- Created `RecentTransactionsPage` and `WaterDeliveryPage` to render recent and scheduled transaction lists.&#10;- Added `TransactionRowRenderer` and `item_transaction.xml` for formatting transaction details and amount color coding.&#10;- Updated `MainActivity` and page layouts to bind and display the new transaction views." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

@@ -56,7 +56,7 @@
     <string name="goal_amount_placeholder">0.00</string>
     <string name="goal_description_placeholder">What are you saving for?</string>
     <string name="goal_target_date_label">Target date</string>
-    <string name="goal_add_funds">Add funds</string>
+    <string name="goal_add_funds">Add</string>
     <string name="goal_add_funds_title">Add funds to %1$s</string>
     <string name="goal_add_funds_hint">Amount (e.g. 25.00)</string>
     <string name="goal_add_funds_confirm">Add</string>
@@ -66,7 +66,7 @@
     <string name="goal_add_funds_failed">Could not add funds. Please try again.</string>
     <string name="goal_add_funds_reached_button">Goal reached</string>
     <string name="goal_add_funds_reached_message">This goal has already reached its target.</string>
-    <string name="goal_take_out">Take out funds</string>
+    <string name="goal_take_out">Take out</string>
     <string name="goal_take_out_title">Take out funds from %1$s</string>
     <string name="goal_take_out_confirm">Take out</string>
     <string name="goal_take_out_empty_button">Nothing to take out</string>
