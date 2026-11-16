@@ -18,7 +18,7 @@ class GardenPage(
     private val gardenApp: GardenBudgetApp,
     private val scope: CoroutineScope
 ) {
-    fun bind(onNavigate: (String) -> Unit) {
+    fun bind(onNavigate: (String) -> Unit,onEditBudget: (Long) -> Unit) {
         val container = root.findViewById<LinearLayout>(R.id.garden_container)
         val status = root.findViewById<TextView>(R.id.garden_status_text)
         root.findViewById<View>(R.id.garden_create_goal_button).setOnClickListener {
@@ -53,6 +53,9 @@ class GardenPage(
                             currency.format(BigDecimal.valueOf(budget.goalAmount, 2))
                         )
                     container.addView(row)
+                    row.setOnClickListener {
+                        onEditBudget(budget.id)
+                    }
                 }
 
                 status.setText(R.string.garden_empty)
