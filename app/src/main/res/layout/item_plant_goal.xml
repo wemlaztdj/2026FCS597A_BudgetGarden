@@ -42,12 +42,28 @@
             android:textColor="@color/garden_goal_body"
             android:textSize="16sp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/add_funds_button"
-            style="@style/GardenGoalButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/goal_add_funds" />
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_funds_button"
+                style="@style/GardenGoalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/goal_add_funds" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/take_out_funds_button"
+                style="@style/GardenGoalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/goal_take_out" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
