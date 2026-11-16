@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Budget Garden</string>
     <string name="home">Home</string>
-    <string name="take_out">Take Out Funds</string>
+    <string name="take_out">Spend Funds</string>
     <string name="your_garden">Your Garden</string>
     <string name="fund_details">Fund Details</string>
     <string name="overall_funds">Overall funds</string>
@@ -72,4 +72,18 @@
     <string name="goal_take_out_empty_button">Nothing to take out</string>
     <string name="goal_take_out_exceeds">You can take out at most %1$s from this goal.</string>
     <string name="goal_take_out_success">Funds returned to your Wallet.</string>
+    <string name="spend_source_label">Spend from</string>
+    <string name="spend_leftover_option">Leftover funds</string>
+    <string name="spend_amount_label">Amount</string>
+    <string name="spend_amount_hint">e.g. 25.00</string>
+    <string name="spend_memo_label">What was it for? (optional)</string>
+    <string name="spend_memo_hint">e.g. Lunch</string>
+    <string name="spend_submit">Spend</string>
+    <string name="spend_default_memo">Spent funds</string>
+    <string name="spend_success">Spending recorded.</string>
+    <string name="spend_not_enough">You can spend at most %1$s from this source.</string>
+    <string name="spend_load_failed">Could not load your funds.</string>
+    <string name="goal_spend">Spend</string>
+    <string name="goal_spend_title">Spend from %1$s</string>
+    <string name="goal_spend_empty_button">Nothing to spend</string>
 </resources>

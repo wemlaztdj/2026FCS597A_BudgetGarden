@@ -61,11 +61,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Implemented ability to add funds">
+    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Implemented ability to take out funds on the garden page">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/SpendFunds.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/TakeOutFundsPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/TakeOutFundsPage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_plant_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_plant_goal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_take_out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_take_out.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,10 +103,17 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/add-funds" />
+        <entry key="$PROJECT_DIR$" value="feature/take-out-funds" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,7 +151,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "feature/take-out-funds",
+    "git-widget-placeholder": "feature/spend-funds",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kelll/AndroidStudioProjects/2026FCS597-A_Assignment6_kotlin",
     "project.structure.last.edited": "Project",
@@ -251,7 +262,8 @@
     <MESSAGE value="First commint" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Implemented ability to add funds" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented ability to add funds" />
+    <MESSAGE value="Implemented ability to take out funds on the garden page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented ability to take out funds on the garden page" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

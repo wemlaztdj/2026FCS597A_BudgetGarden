@@ -65,5 +65,12 @@
                 android:layout_weight="1"
                 android:text="@string/goal_take_out" />
         </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spend_funds_button"
+            style="@style/GardenGoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/goal_spend" />
     </LinearLayout>
 </LinearLayout>

@@ -99,6 +99,16 @@ class GardenPage(
                         }
                     }
 
+                    val spendButton = row.findViewById<Button>(R.id.spend_funds_button)
+                    if (balance <= 0L) {
+                        spendButton.isEnabled = false
+                        spendButton.setText(R.string.goal_spend_empty_button)
+                    } else {
+                        spendButton.setOnClickListener {
+                            showSpendDialog(budget.id, budget.name)
+                        }
+                    }
+
                     container.addView(row)
                 }
 
@@ -261,6 +271,58 @@ class GardenPage(
             } catch (e: Exception) {
                 Log.e("GardenPage", "Could not take out funds", e)
                 Toast.makeText(
+                    context, R.string.goal_add_funds_failed, Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+    }
+
+    private fun showSpendDialog(goalId: Long, goalName: String) {
+        val context = root.context
+        val input = EditText(context).apply {
+            inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+            hint = context.getString(R.string.goal_add_funds_hint)
+        }
+
+        AlertDialog.Builder(context)
+            .setTitle(context.getString(R.string.goal_spend_title, goalName))
+            .setView(input)
+            .setPositiveButton(R.string.spend_submit) { _, _ ->
+                val cents = parseCents(input.text.toString().trim())
+                if (cents == null) {
+                    Toast.makeText(
+                        context, R.string.goal_add_funds_invalid, Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    spendFromGoal(goalId, cents)
+                }
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun spendFromGoal(goalId: Long, cents: Long) {
+        val context = root.context
+        scope.launch {
+            val memo = context.getString(R.string.spend_default_memo)
+            when (val result = SpendFunds.spend(gardenApp, goalId, cents, memo)) {
+                is SpendResult.Success -> {
+                    Toast.makeText(
+                        context, R.string.spend_success, Toast.LENGTH_SHORT
+                    ).show()
+                    navigate("home")
+                }
+                is SpendResult.NotEnough -> {
+                    val formatted = NumberFormat.getCurrencyInstance(Locale.US)
+                        .format(BigDecimal.valueOf(result.availableCents, 2))
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.spend_not_enough, formatted),
+                        Toast.LENGTH_LONG
+                    ).show()
+                    loadGarden()
+                }
+                is SpendResult.Failed -> Toast.makeText(
                     context, R.string.goal_add_funds_failed, Toast.LENGTH_LONG
                 ).show()
             }

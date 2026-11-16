@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
         when (page) {
             "home" -> HomePage(pageView, gardenApp, scope).bind(::showPage)
             "garden" -> GardenPage(pageView, gardenApp, scope).bind(::showPage)
+            "withdraw" -> TakeOutFundsPage(pageView, gardenApp, scope).bind(::showPage)
             "create_goal" -> CreatePlantGoalPage(
                 pageView,
                 createGoalViewModel,
