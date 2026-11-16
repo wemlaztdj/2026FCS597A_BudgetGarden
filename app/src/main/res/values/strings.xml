@@ -56,4 +56,14 @@
     <string name="goal_amount_placeholder">0.00</string>
     <string name="goal_description_placeholder">What are you saving for?</string>
     <string name="goal_target_date_label">Target date</string>
+    <string name="goal_modify">Edit Goal</string>
+    <string name="goal_archive">Archive Goal</string>
+    <string name="goal_modify_description">Update your plant\'s details or archive it when you no longer need it.</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="archive_budget">Archive Budget</string>
+    <string name="edit_balance_loading">Current balance: Loading…</string>
+    <string name="archive_confirm_title">Archive this budget?</string>
+    <string name="archive_confirm_message">Remaining funds will be returned to your wallet. Your transaction history will be preserved.</string>
+    <string name="edit_current_balance_format">Current balance: %1$s</string>
+
 </resources>

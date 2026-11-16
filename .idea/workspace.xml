@@ -35,6 +35,12 @@
           <theme>@style/Theme.Budgetgarden</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml">
+        <config>
+          <state>Portrait</state>
+          <theme>@style/Theme.Budgetgarden</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/page_garden.xml">
         <config>
           <theme>@style/Theme.Budgetgarden</theme>
@@ -62,11 +68,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="First commit">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/EditBudgetPage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_edit_budget.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/DatabaseTestActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_database_test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/data/BudgetRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/data/BudgetRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +109,18 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/database_merge" />
+        <entry key="$PROJECT_DIR$" value="chore/remove-testing-code" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,7 +158,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "chore/remove-testing-code",
+    "git-widget-placeholder": "feature/modify__Archive__budgets",
+    "git.auto.fetch.suggestion.counter": "2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kelll/AndroidStudioProjects/2026FCS597-A_Assignment6_kotlin",
     "project.structure.last.edited": "Project",
@@ -257,12 +276,12 @@
       <map>
         <entry key="edu.stevens.cs597.budgetgarden">
           <value>
-            <CheckInfo lastCheckTimestamp="1794670231061" />
+            <CheckInfo lastCheckTimestamp="1794786531439" />
           </value>
         </entry>
         <entry key="edu.stevens.cs597.budgetgarden.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1794670231064" />
+            <CheckInfo lastCheckTimestamp="1794786531438" />
           </value>
         </entry>
       </map>
