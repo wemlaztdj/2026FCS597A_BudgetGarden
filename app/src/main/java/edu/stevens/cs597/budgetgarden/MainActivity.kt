@@ -22,7 +22,11 @@ class MainActivity : AppCompatActivity() {
     private val gardenApp by lazy {
         application as GardenBudgetApp
     }
-
+    private var selectedBudgetId: Long? = null
+    private fun openEditBudget(budgetId: Long) {
+        selectedBudgetId = budgetId
+        showPage("edit_budget")
+    }
     private var pageScope: CoroutineScope? = null
     private val createGoalViewModel by viewModels<CreatePlantGoalViewModel>()
 
@@ -41,10 +45,17 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.garden_button).setOnClickListener { showPage("garden") }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (currentPage != "home") showPage("home") else finish()
+                when (currentPage) {
+                    "edit_budget" -> showPage("garden")
+                    "home" -> finish()
+                    else -> showPage("home")
+                }
             }
         })
         currentPage = savedInstanceState?.getString("page") ?: "home"
+        selectedBudgetId = savedInstanceState
+            ?.takeIf { it.containsKey("selectedBudgetId") }
+            ?.getLong("selectedBudgetId")
         showPage(currentPage)
     }
 
@@ -67,6 +78,7 @@ class MainActivity : AppCompatActivity() {
             "details" -> R.layout.page_details
             "water" -> R.layout.page_water_delivery
             "create_goal" -> R.layout.page_create_goal
+            "edit_budget" -> R.layout.page_edit_budget
             else -> R.layout.page_home
         }
         val container = findViewById<FrameLayout>(R.id.page_container)
@@ -75,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         container.addView(pageView)
         when (page) {
             "home" -> HomePage(pageView, gardenApp, scope).bind(::showPage)
-            "garden" -> GardenPage(pageView, gardenApp, scope).bind(::showPage)
+            "garden" -> GardenPage(pageView, gardenApp, scope).bind(::showPage, ::openEditBudget)
             "withdraw" -> TakeOutFundsPage(pageView, gardenApp, scope).bind(::showPage)
             "create_goal" -> CreatePlantGoalPage(
                 pageView,
@@ -83,6 +95,11 @@ class MainActivity : AppCompatActivity() {
                 scope,
                 lifecycle
             ).bind(::showPage)
+            "edit_budget" -> selectedBudgetId?.let { budgetId ->
+                EditBudgetPage(
+                    pageView, gardenApp, scope, budgetId
+                ).bind(::showPage)
+            }
         }
         val selectedId = when (page) {
             "withdraw" -> R.id.take_out_button
@@ -105,6 +122,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putString("page", currentPage)
+        selectedBudgetId?.let {
+            outState.putLong("selectedBudgetId", it)
+        }
         super.onSaveInstanceState(outState)
     }
 }

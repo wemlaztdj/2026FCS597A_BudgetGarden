@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/garden_goal_background"
+    android:fillViewport="true"
+    android:theme="@style/ThemeOverlay.Budgetgarden.Goal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="24dp">
+
+        <!-- Page Title -->
+        <TextView
+            style="@style/GardenTitle"
+            android:accessibilityHeading="true"
+            android:text="@string/goal_modify" />
+
+        <TextView
+            style="@style/GardenGoalSubtitle"
+            android:layout_marginBottom="8dp"
+            android:text="@string/goal_modify_description" />
+
+        <!-- Budget Name -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/edit_goal_name_input"
+            android:text="@string/goal_name_hint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_goal_name_input"
+            style="@style/GardenGoalTextInput"
+            android:hint="@string/goal_name_placeholder"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:maxLines="1" />
+
+        <!-- Target Amount -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/edit_goal_amount_input"
+            android:text="@string/goal_amount_hint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_goal_amount_input"
+            style="@style/GardenGoalTextInput"
+            android:hint="@string/goal_amount_placeholder"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:maxLines="1" />
+
+        <!-- Current Balance (Read Only) -->
+        <TextView
+            android:id="@+id/edit_current_balance_text"
+            style="@style/GardenGoalSubtitle"
+            android:layout_marginTop="8dp"
+            android:text="@string/edit_balance_loading" />
+
+        <!-- Target Date -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/edit_goal_date_button"
+            android:text="@string/goal_target_date_label" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_goal_date_button"
+            style="@style/GardenGoalDateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/goal_date_prompt" />
+
+        <!-- Description -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/edit_goal_description_input"
+            android:text="@string/goal_description_hint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_goal_description_input"
+            style="@style/GardenGoalTextInput"
+            android:gravity="top|start"
+            android:hint="@string/goal_description_placeholder"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="3" />
+
+        <!-- Plant Selector -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:accessibilityHeading="true"
+            android:text="@string/choose_plant" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/garden_plant_picker_background"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_previous_plant_button"
+                    style="@style/GardenGoalPlantButton"
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/previous_plant"
+                    android:text="@string/x2039" />
+
+                <ImageView
+                    android:id="@+id/edit_plant_preview"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/yellow_flower_description"
+                    android:importantForAccessibility="no"
+                    android:paddingHorizontal="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/yellow_flower" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_next_plant_button"
+                    style="@style/GardenGoalPlantButton"
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/next_plant"
+                    android:text="@string/x203a" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/edit_plant_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:accessibilityLiveRegion="polite"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:text="@string/yellow_flower_description"
+                android:textColor="@color/garden_goal_heading"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Save Changes -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_changes_button"
+            style="@style/GardenGoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/save_changes" />
+
+        <!-- Cancel / Archive -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_edit_button"
+                style="@style/GardenGoalSecondaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="@string/cancel_goal_creation" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/archive_budget_button"
+                style="@style/GardenGoalSecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="0.382"
+                android:text="@string/archive_budget"
+                android:textColor="#B3261E" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

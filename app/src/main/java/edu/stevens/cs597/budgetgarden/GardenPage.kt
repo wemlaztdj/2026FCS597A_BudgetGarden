@@ -24,8 +24,11 @@ class GardenPage(
     private val scope: CoroutineScope
 ) {
     private var navigate: (String) -> Unit = {}
-    fun bind(onNavigate: (String) -> Unit) {
+    private var editBudget: (Long) -> Unit = {}
+
+    fun bind(onNavigate: (String) -> Unit, onEditBudget: (Long) -> Unit) {
         navigate = onNavigate
+        editBudget = onEditBudget
         root.findViewById<View>(R.id.garden_create_goal_button).setOnClickListener {
             onNavigate("create_goal")
         }
@@ -110,6 +113,9 @@ class GardenPage(
                     }
 
                     container.addView(row)
+                    row.setOnClickListener {
+                        editBudget(budget.id)
+                    }
                 }
 
                 status.setText(R.string.garden_empty)

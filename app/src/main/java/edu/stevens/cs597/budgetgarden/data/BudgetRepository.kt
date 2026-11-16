@@ -114,6 +114,44 @@ class BudgetRepository(private val db: AppDatabase) {
         verifyBalances()
     }
 
+    suspend fun updateBudgetDetails(
+        budgetId: Long,
+        name: String,
+        goalAmount: Long,
+        neededDate: Long?,
+        description: String,
+        icon: String
+    ) = db.withTransaction {
+
+        require(name.isNotBlank()) {
+            "Enter a budget name"
+        }
+
+        require(goalAmount >= 0) {
+            "Goal cannot be negative"
+        }
+
+        val budget = dao.getBudget(budgetId)
+            ?: error("Budget not found")
+
+        require(!budget.isArchived) {
+            "Cannot edit an archived budget"
+        }
+
+        require(budget.type != "WALLET") {
+            "Cannot edit the wallet here"
+        }
+
+        dao.updateBudget(
+            budget.copy(
+                name = name.trim(),
+                goalAmount = goalAmount,
+                neededDate = neededDate,
+                description = description.trim(),
+                icon = icon.ifBlank { budget.icon }
+            )
+        )
+    }
     /**
      * Check the running total and each plant after every posting date, including
      * future scheduled dates. Wallets may be negative; plants and total cannot.

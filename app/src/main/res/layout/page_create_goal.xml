@@ -98,7 +98,7 @@
                     android:layout_width="52dp"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/previous_plant"
-                    android:text="&#x2039;" />
+                    android:text="@string/x2039" />
 
                 <ImageView
                     android:id="@+id/plant_preview"
@@ -117,7 +117,7 @@
                     android:layout_width="52dp"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/next_plant"
-                    android:text="&#x203A;" />
+                    android:text="@string/x203a" />
             </LinearLayout>
 
             <TextView

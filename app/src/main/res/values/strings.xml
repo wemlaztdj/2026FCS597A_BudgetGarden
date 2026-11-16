@@ -86,4 +86,15 @@
     <string name="goal_spend">Spend</string>
     <string name="goal_spend_title">Spend from %1$s</string>
     <string name="goal_spend_empty_button">Nothing to spend</string>
+    <string name="goal_modify">Edit Goal</string>
+    <string name="goal_archive">Archive Goal</string>
+    <string name="goal_modify_description">Update your plant\'s details or archive it when you no longer need it.</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="archive_budget">Archive</string>
+    <string name="edit_balance_loading">Current balance: Loading…</string>
+    <string name="archive_confirm_title">Archive this?</string>
+    <string name="archive_confirm_message">Remaining funds will be returned to your wallet. Your transaction history will be preserved.</string>
+    <string name="edit_current_balance_format">Current balance: %1$s</string>
+    <string name="x2039">‹</string>
+    <string name="x203a">›</string>
 </resources>
