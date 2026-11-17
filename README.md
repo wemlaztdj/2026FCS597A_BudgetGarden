@@ -13,7 +13,7 @@ This is a high-fidelity prototype of a budgeting web app designed for college st
 4. Go back to the Device Manager and select the emulator you just started. Make sure the configuration next to says app. Click the green Run button with a sideways triangle next to it. This build may take some time to download the app on the device emulator.
 
 ## Team Contribution Statement
-Tim Cao: Designed, implemented, and tested the app's database using Room (SQLite). Created documentation for teammates. 
+Tim Cao: Designed, implemented, and tested the app's database using Room (SQLite). Implemented the edit/archive goal page, add to wallet, and transaction list page. Created documentation for teammates. 
 
 Kelly Chan: Uploaded most of the image components, implemented the foundations and page navigation, and contributed to the feature/home branch
 
