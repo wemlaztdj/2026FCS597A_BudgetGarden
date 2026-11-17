@@ -17,8 +17,6 @@ Tim Cao: Designed, implemented, and tested the app's database using Room (SQLite
 
 Kelly Chan: Uploaded most of the image components, implemented the foundations and page navigation, and contributed to the feature/home branch
 
-
-William Ee:
-
+William Ee: Implemented and tested savings goal creation and the Garden display, including input validation, plant selection, and integration with the shared database
 
 Angeleanne Enriquez: Set up the Canvas text submission and GitHub README, implemented the features of adding and removing funds from a savings goal and spending funds from a savings goal/leftover funds
