@@ -132,7 +132,7 @@
 
     <!-- Description -->
     <string name="wallet_memo_label">Description (Optional)</string>
-    <string name="wallet_memo_hint">Example:paycheck</string>
+    <string name="wallet_memo_hint">Example: paycheck</string>
 
     <!-- Buttons -->
     <string name="wallet_add_submit">Add Funds</string>
