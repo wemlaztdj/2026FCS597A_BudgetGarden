@@ -115,6 +115,7 @@
             android:id="@+id/cancel_wallet_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/GardenGoalSecondaryButton"
             android:layout_marginTop="12dp"
             android:text="@string/wallet_add_cancel" />
 

@@ -1,125 +1,296 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
-  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal" android:paddingHorizontal="12dp" android:paddingVertical="24dp">
-    <TextView style="@style/GardenTitle" android:text="@string/app_name" />
-    <TextView style="@style/GardenBody" android:text="@string/overall_funds" />
-    <TextView style="@style/GardenTitle" android:text="@string/sample_total" android:id="@+id/overall_funds_text" />
-    <ImageView android:layout_width="match_parent" android:layout_height="220dp" android:scaleType="fitCenter" android:src="@drawable/tree" android:contentDescription="@string/tree_description" />
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false" android:layout_marginTop="12dp" android:id="@+id/home_garden_container">
-      <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/yellow_flower" android:contentDescription="@string/yellow_flower_description" />
-      <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/pink_flower" android:contentDescription="@string/pink_flower_description" />
-      <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/budding_red_flower" android:contentDescription="@string/budding_red_flower_description" />
-      <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/red_flower" android:contentDescription="@string/red_flower_description" />
-    </LinearLayout>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/create_goal_button"
-        style="@style/GardenGoalButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/create_savings_goal" />
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:baselineAligned="false"
-        android:layout_marginTop="12dp">
-      <LinearLayout android:id="@+id/water_delivery_button"
-          android:layout_width="0dp"
-          android:layout_height="96dp"
-          android:layout_weight="1"
-          android:padding="6dp"
-          android:orientation="vertical"
-          android:gravity="center"
-          android:background="@drawable/navigation_background"
-          android:foreground="?attr/selectableItemBackground"
-          android:clickable="true"
-          android:focusable="true"
-          android:contentDescription="@string/next_water_delivery">
-        <TextView android:layout_width="match_parent"
-            android:layout_height="22dp"
-            android:gravity="center"
-            android:text="@string/next_water_delivery"
-            android:textColor="#24452C"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="9sp"
-            android:autoSizeMaxTextSize="12sp"
-            android:autoSizeStepGranularity="1sp"
-            android:importantForAccessibility="no" />
-        <ImageView android:layout_width="72dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="fitCenter"
-            android:scaleX="-1"
-            android:src="@drawable/truck"
-            android:importantForAccessibility="no" />
-      </LinearLayout>
-      <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="0.5" />
-      <LinearLayout android:id="@+id/details_button"
-          android:layout_width="0dp"
-          android:layout_height="96dp"
-          android:layout_weight="1"
-          android:padding="6dp"
-          android:orientation="vertical"
-          android:gravity="center"
-          android:background="@drawable/navigation_background"
-          android:foreground="?attr/selectableItemBackground"
-          android:clickable="true"
-          android:focusable="true"
-          android:contentDescription="@string/view_details">
-        <TextView android:layout_width="match_parent"
-            android:layout_height="22dp"
-            android:gravity="center"
-            android:text="@string/view_details"
-            android:textColor="#24452C"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="9sp"
-            android:autoSizeMaxTextSize="12sp"
-            android:autoSizeStepGranularity="1sp"
-            android:importantForAccessibility="no" />
-        <ImageView
-            android:layout_width="72dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/clipboard"
-            android:importantForAccessibility="no" />
-      </LinearLayout>
-    </LinearLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/garden_goal_background"
+    android:fillViewport="true">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="12dp"
+      android:background="@drawable/navigation_background"
+      android:orientation="vertical"
+      android:padding="14dp">
+
+    <!-- Header -->
     <LinearLayout
-        android:id="@+id/wallet_overview_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/app_name"
+          android:textColor="@color/garden_goal_heading"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Leftover wallet balance -->
+    <LinearLayout
+        android:id="@+id/home_wallet_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/navigation_background"
         android:clickable="true"
         android:focusable="true"
-        android:contentDescription="View all wallets"
-        android:foreground="?attr/selectableItemBackground">
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
 
-      <TextView
-          style="@style/GardenBody"
-          android:text="@string/leftover"
-          android:importantForAccessibility="no" />
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leftover"
+            android:textColor="@color/garden_goal_hint"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/leftover_funds_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:accessibilityLiveRegion="polite"
+            android:text="@string/balance_loading"
+            android:textColor="@color/garden_goal_heading"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/home_view_wallets"
+            android:textColor="@color/garden_goal_accent"
+            android:textSize="13sp" />
+      </LinearLayout>
 
       <ImageView
-          android:layout_width="110dp"
-          android:layout_height="115dp"
+          android:layout_width="72dp"
+          android:layout_height="78dp"
+          android:contentDescription="@string/water_jug_description"
           android:scaleType="fitCenter"
-          android:src="@drawable/water_jug"
-          android:importantForAccessibility="no" />
+          android:src="@drawable/water_jug" />
+    </LinearLayout>
+
+    <!-- Garden heading and count -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
       <TextView
-          android:id="@+id/leftover_funds_text"
-          style="@style/GardenTitle"
-          android:text="@string/sample_leftover"
-          android:importantForAccessibility="no" />
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/home_savings_garden"
+          android:textColor="@color/garden_goal_heading"
+          android:textSize="18sp"
+          android:textStyle="bold" />
 
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/overall_funds"
+          android:textColor="@color/garden_goal_hint"
+          android:layout_marginRight="8dp"
+          android:textSize="13sp" />
+
+      <TextView
+          android:id="@+id/overall_funds_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/sample_total"
+          android:textColor="@color/garden_goal_hint"
+          android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Main garden card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/navigation_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="140dp"
+          android:contentDescription="@string/tree_description"
+          android:scaleType="fitCenter"
+          android:src="@drawable/tree" />
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false" android:layout_marginTop="12dp" android:id="@+id/home_garden_container">
+        <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/yellow_flower" android:contentDescription="@string/yellow_flower_description" />
+        <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/pink_flower" android:contentDescription="@string/pink_flower_description" />
+        <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/budding_red_flower" android:contentDescription="@string/budding_red_flower_description" />
+        <ImageView android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:padding="4dp" android:scaleType="fitCenter" android:src="@drawable/red_flower" android:contentDescription="@string/red_flower_description" />
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/home_garden_empty"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:padding="8dp"
+          android:text="@string/garden_empty"
+          android:textColor="@color/garden_goal_hint"
+          android:textSize="13sp"
+          android:visibility="gone" />
+
+      <!-- Capped maximum width at 320dp per Material Design recommendations for preview and layout rendering -->
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/create_goal_button"
+          style="@style/GardenGoalButton"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="16dp"
+          android:maxWidth="320dp"
+          android:text="@string/create_savings_goal" />
+    </LinearLayout>
+
+    <!-- Transaction heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/home_transactions"
+        android:textColor="@color/garden_goal_heading"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Two rows, one card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/home_card_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp">
+
+      <LinearLayout
+          android:id="@+id/water_delivery_button"
+          android:layout_width="match_parent"
+          android:layout_height="76dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:scaleX="-1"
+            android:src="@drawable/truck" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/next_water_delivery"
+              android:textColor="@color/garden_goal_heading"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="@string/home_upcoming_subtitle"
+              android:textColor="@color/garden_goal_hint"
+              android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:text="@string/x203a"
+            android:textColor="@color/garden_goal_accent"
+            android:textSize="26sp" />
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/garden_goal_disabled" />
+
+      <LinearLayout
+          android:id="@+id/details_button"
+          android:layout_width="match_parent"
+          android:layout_height="76dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/clipboard" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/view_details"
+              android:textColor="@color/garden_goal_heading"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="@string/home_recent_subtitle"
+              android:textColor="@color/garden_goal_hint"
+              android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:text="@string/x203a"
+            android:textColor="@color/garden_goal_accent"
+            android:textSize="26sp" />
+      </LinearLayout>
     </LinearLayout>
   </LinearLayout>
 </ScrollView>

@@ -5,8 +5,8 @@
     <string name="your_garden">Your Garden</string>
     <string name="fund_details">Fund Details</string>
     <string name="overall_funds">Overall funds</string>
-    <string name="sample_total">$1,000.00</string>
-    <string name="sample_leftover">$250.00</string>
+    <string name="sample_total">$0.00</string>
+    <string name="sample_leftover">$0.00</string>
     <string name="leftover">Leftover funds</string>
     <string name="view_details">Recent Transactions</string>
 <!--    <string name="water_date">Next water delivery: Not scheduled</string>-->
@@ -149,4 +149,18 @@
     <string name="wallet_loading">Loading wallet information…</string>
     <string name="wallet_load_failed">Could not load wallets.</string>
     <string name="wallet_no_wallets">No active wallets available.</string>
+
+    <string name="home_overview">Overview</string>
+    <string name="home_view_wallets">View wallets ›</string>
+    <string name="home_wallets_title">Your wallets</string>
+    <string name="home_wallets_empty">No active wallets.</string>
+    <string name="home_wallets_error">Could not load wallets.</string>
+    <string name="home_savings_garden">My Savings Garden</string>
+    <string name="home_goal_count">%1$d goals</string>
+    <string name="home_goal_count_loading">…</string>
+    <string name="home_create_goal">+  Create a savings goal</string>
+    <string name="home_transactions">Transactions</string>
+    <string name="home_upcoming_subtitle">Upcoming funds and expenses</string>
+    <string name="home_recent_subtitle">Your transaction history</string>
+
 </resources>
