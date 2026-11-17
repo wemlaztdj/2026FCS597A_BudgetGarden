@@ -15,7 +15,7 @@ This is a high-fidelity prototype of a budgeting web app designed for college st
 ## Team Contribution Statement
 Tim Cao: Designed, implemented, and tested the app's database using Room (SQLite). Created documentation for teammates. 
 
-Kelly Chan:
+Kelly Chan: Uploaded most of the image components, implemented the foundations and page navigation, and contributed to the feature/home branch
 
 
 William Ee:
