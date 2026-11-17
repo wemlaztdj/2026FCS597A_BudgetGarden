@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity() {
             override fun handleOnBackPressed() {
                 when (currentPage) {
                     "edit_budget" -> showPage("garden")
+                    "add_wallet" -> showPage("wallets")
+                    "wallets" -> showPage("home")
                     "home" -> finish()
                     else -> showPage("home")
                 }
@@ -79,6 +81,8 @@ class MainActivity : AppCompatActivity() {
             "water" -> R.layout.page_water_delivery
             "create_goal" -> R.layout.page_create_goal
             "edit_budget" -> R.layout.page_edit_budget
+            "wallets" -> R.layout.page_wallets
+            "add_wallet" -> R.layout.page_add_to_wallet
             else -> R.layout.page_home
         }
         val container = findViewById<FrameLayout>(R.id.page_container)
@@ -110,6 +114,17 @@ class MainActivity : AppCompatActivity() {
                     pageView, gardenApp, scope, budgetId
                 ).bind(::showPage)
             }
+            "wallets" -> WalletsPage(
+                pageView,
+                gardenApp,
+                scope
+            ).bind(::showPage)
+
+            "add_wallet" -> AddToWalletPage(
+                pageView,
+                gardenApp,
+                scope
+            ).bind(::showPage)
         }
         val selectedId = when (page) {
             "withdraw" -> R.id.take_out_button

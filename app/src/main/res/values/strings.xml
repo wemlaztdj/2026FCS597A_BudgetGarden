@@ -110,4 +110,43 @@
     <string name="recent_transactions_loading">Loading transactions…</string>
     <string name="recent_transactions_empty">No posted transactions yet.</string>
     <string name="recent_transactions_error">Could not load recent transactions.</string>
+
+    <!-- Page Title and Description -->
+    <string name="wallet_add_title">Add to Wallet</string>
+    <string name="wallet_add_description">Add funds to your wallet now or schedule them for a future date.</string>
+
+    <!-- Wallet Selection -->
+    <string name="wallet_current_balance">Current Wallet Balance</string>
+    <string name="wallet_balance_placeholder">$0.00</string>
+    <string name="wallet_deposit_into">Deposit Into</string>
+    <string name="wallet_select_description">Select destination wallet</string>
+
+    <!-- Amount -->
+    <string name="wallet_amount_label">Amount</string>
+    <string name="wallet_amount_hint">0.00</string>
+
+    <!-- Posting Date -->
+    <string name="wallet_posting_date_label">Posting Date</string>
+    <string name="wallet_posting_date_prompt">Select Posting Date</string>
+    <string name="wallet_posting_date_description">Future deposits will be included in your wallet balance on their posting date.</string>
+
+    <!-- Description -->
+    <string name="wallet_memo_label">Description (Optional)</string>
+    <string name="wallet_memo_hint">Example:paycheck</string>
+
+    <!-- Buttons -->
+    <string name="wallet_add_submit">Add Funds</string>
+    <string name="wallet_add_cancel">Cancel</string>
+
+    <!-- Validation Messages -->
+    <string name="wallet_amount_invalid">Enter an amount greater than zero, with at most two decimal places.</string>
+    <string name="wallet_select_required">Please select a wallet.</string>
+
+    <!-- Transaction Messages -->
+    <string name="wallet_default_memo">Added to Wallet</string>
+    <string name="wallet_add_success">Funds added successfully!</string>
+    <string name="wallet_add_failed">Could not add funds. Please try again.</string>
+    <string name="wallet_loading">Loading wallet information…</string>
+    <string name="wallet_load_failed">Could not load wallets.</string>
+    <string name="wallet_no_wallets">No active wallets available.</string>
 </resources>
