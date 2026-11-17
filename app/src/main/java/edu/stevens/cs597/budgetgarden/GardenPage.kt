@@ -92,7 +92,24 @@ class GardenPage(
                         }
                     }
 
-                    val takeOutButton = row.findViewById<Button>(R.id.take_out_funds_button)
+
+                    val takeOutButton = row.findViewById<Button>(
+                        R.id.take_out_funds_button
+                    )
+
+                    val spendButton = row.findViewById<Button>(
+                        R.id.spend_funds_button
+                    )
+
+// Use the existing numeric balance from your database.
+                    val hasFunds = balance > 0
+
+                    takeOutButton.visibility =
+                        if (hasFunds) View.VISIBLE else View.GONE
+
+                    spendButton.visibility =
+                        if (hasFunds) View.VISIBLE else View.GONE
+
                     if (balance <= 0L) {
                         takeOutButton.isEnabled = false
                         takeOutButton.setText(R.string.goal_take_out_empty_button)
@@ -102,7 +119,6 @@ class GardenPage(
                         }
                     }
 
-                    val spendButton = row.findViewById<Button>(R.id.spend_funds_button)
                     if (balance <= 0L) {
                         spendButton.isEnabled = false
                         spendButton.setText(R.string.goal_spend_empty_button)
@@ -192,7 +208,7 @@ class GardenPage(
                 Toast.makeText(
                     context, R.string.goal_add_funds_success, Toast.LENGTH_SHORT
                 ).show()
-                navigate("home")
+                loadGarden()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {

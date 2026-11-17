@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/garden_goal_background"
+    android:fillViewport="true"
+    android:theme="@style/ThemeOverlay.Budgetgarden.Goal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="24dp">
+
+        <!-- Page Title -->
+        <TextView
+            style="@style/GardenTitle"
+            android:accessibilityHeading="true"
+            android:text="@string/wallet_add_title" />
+
+        <!-- Page Description -->
+        <TextView
+            style="@style/GardenGoalSubtitle"
+            android:layout_marginBottom="24dp"
+            android:text="@string/wallet_add_description" />
+
+        <!-- Current Wallet Balance -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:text="@string/wallet_current_balance" />
+
+        <TextView
+            android:id="@+id/wallet_balance_text"
+            style="@style/GardenTitle"
+            android:layout_marginBottom="24dp"
+            android:text="@string/wallet_balance_placeholder" />
+
+        <!-- Select Destination Wallet -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/wallet_spinner"
+            android:text="@string/wallet_deposit_into" />
+
+        <Spinner
+            android:id="@+id/wallet_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/wallet_select_description" />
+
+        <!-- Amount -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/wallet_amount_input"
+            android:text="@string/wallet_amount_label" />
+
+        <EditText
+            android:id="@+id/wallet_amount_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/wallet_amount_hint"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:importantForAutofill="no" />
+
+        <!-- Posting Date -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:text="@string/wallet_posting_date_label" />
+
+        <Button
+            android:id="@+id/wallet_posting_date_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/wallet_posting_date_prompt" />
+
+        <TextView
+            style="@style/GardenGoalSubtitle"
+            android:layout_marginBottom="20dp"
+            android:text="@string/wallet_posting_date_description" />
+
+        <!-- Description -->
+        <TextView
+            style="@style/GardenGoalFieldLabel"
+            android:labelFor="@id/wallet_memo_input"
+            android:text="@string/wallet_memo_label" />
+
+        <EditText
+            android:id="@+id/wallet_memo_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:hint="@string/wallet_memo_hint"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:importantForAutofill="no" />
+
+        <!-- Add Funds Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_wallet_button"
+            style="@style/GardenGoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_add_submit" />
+
+        <!-- Cancel Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_wallet_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/wallet_add_cancel" />
+
+    </LinearLayout>
+</ScrollView>

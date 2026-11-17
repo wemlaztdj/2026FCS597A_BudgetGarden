@@ -63,6 +63,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:text="@string/goal_take_out" />
         </LinearLayout>
         <com.google.android.material.button.MaterialButton
@@ -71,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:visibility="gone"
             android:text="@string/goal_spend" />
     </LinearLayout>
 </LinearLayout>

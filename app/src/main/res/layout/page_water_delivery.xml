@@ -26,16 +26,6 @@
             android:gravity="start"
             android:text="@string/upcoming_transactions_subtitle" />
 
-        <!-- Garden illustration -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
-            android:scaleType="fitCenter"
-            android:scaleX="-1"
-            android:src="@drawable/truck"
-            android:contentDescription="@string/upcoming_truck_description" />
-
         <!-- List heading -->
         <TextView
             style="@style/GardenBody"

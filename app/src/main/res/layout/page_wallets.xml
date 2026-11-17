@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/garden_goal_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/GardenTitle"
+            android:text="My Wallets" />
+
+        <TextView
+            style="@style/GardenBody"
+            android:text="Manage your available funds."
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            style="@style/GardenBody"
+            android:text="Total Wallet Balance" />
+
+        <TextView
+            android:id="@+id/total_wallet_balance_text"
+            style="@style/GardenTitle"
+            android:text="$0.00"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            style="@style/GardenTitle"
+            android:text="Your Wallets"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/wallet_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/wallets_empty_text"
+            style="@style/GardenBody"
+            android:text="No wallets found."
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_funds_button"
+            style="@style/GardenGoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="+ Add Funds" />
+
+    </LinearLayout>
+</ScrollView>
