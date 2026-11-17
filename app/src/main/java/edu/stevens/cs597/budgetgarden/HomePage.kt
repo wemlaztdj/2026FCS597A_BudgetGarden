@@ -24,11 +24,10 @@ class HomePage(
             .setOnClickListener {
                 onNavigate("create_goal")
             }
-        root.findViewById<View>(
-            R.id.wallet_overview_button
-        ).setOnClickListener {
-            onNavigate("wallets")
-        }
+        root.findViewById<View>(R.id.home_wallet_card)
+            .setOnClickListener {
+                onNavigate("wallets")
+            }
         val loading = root.context.getString(R.string.balance_loading)
         renderBalances(loading, loading)
 

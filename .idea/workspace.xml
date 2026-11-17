@@ -5,6 +5,21 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/home_card_background.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/home_outer_background.xml">
+        <config>
+          <theme>@style/Theme.Budgetgarden</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+        <config>
+          <theme>@style/Theme.Budgetgarden</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_plant_goal.xml">
         <config>
           <theme>@style/Theme.Budgetgarden</theme>
@@ -62,6 +77,12 @@
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/page_home.xml">
         <config>
+          <state>Portrait</state>
+          <theme>@style/Theme.Budgetgarden</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/page_home2.xml">
+        <config>
           <theme>@style/Theme.Budgetgarden</theme>
         </config>
       </layout>
@@ -87,11 +108,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Fix spacing in wallet memo hint text&#10;&#10;Added a space after the colon in `wallet_memo_hint` string resource.">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home_card_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home_outer_background.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_plant_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_plant_goal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_water_delivery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_water_delivery.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/HomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/HomePage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_wallets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_wallets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/goal_styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/goal_styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +128,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\wemlh\.android\avd\Test1.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[PhysicalDevice::serial=RFGL91W59AX]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -179,7 +206,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
-    "git-widget-placeholder": "feature/add__to__wallet",
+    "git-widget-placeholder": "layout/home",
     "git.auto.fetch.suggestion.counter": "3",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kelll/AndroidStudioProjects/2026FCS597-A_Assignment6_kotlin",
@@ -190,6 +217,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\597\2026FCS597A_BudgetGarden\app\src\main\res\drawable" />
       <recent name="D:\Projects\597\2026FCS597A_BudgetGarden\app\src\main\res\values" />
       <recent name="D:\Projects\597\2026FCS597A_BudgetGarden\app\src\main\res\layout" />
       <recent name="D:\Projects\597\2026FCS597A_BudgetGarden\app\src\main\java\edu\stevens\cs597\budgetgarden\data" />
