@@ -86,10 +86,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Add wallet management views and add-to-wallet feature&#10;&#10;- Added `WalletsPage` to display active wallets, individual wallet balances, and total wallet balance.&#10;- Added `AddToWalletPage` to allow users to add or schedule funds to a selected wallet with a posting date and memo.&#10;- Updated `HomePage` and `MainActivity` to support navigation and routing for wallet screens.&#10;- Added string resources and layouts for wallet management workflows.">
+    <list default="true" id="1aa8a723-4646-4aae-b179-1f75e75ef667" name="Changes" comment="Fix spacing in wallet memo hint text&#10;&#10;Added a space after the colon in `wallet_memo_hint` string resource.">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/stevens/cs597/budgetgarden/GardenPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_plant_goal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_plant_goal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/page_water_delivery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/page_water_delivery.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +295,8 @@
     <MESSAGE value="Add scheduled and recent transaction history views&#10;&#10;- Added `upcomingTransactions` and `postedTransactions` queries in `BudgetDao` to fetch future and historical transactions.&#10;- Created `RecentTransactionsPage` and `WaterDeliveryPage` to render recent and scheduled transaction lists.&#10;- Added `TransactionRowRenderer` and `item_transaction.xml` for formatting transaction details and amount color coding.&#10;- Updated `MainActivity` and page layouts to bind and display the new transaction views." />
     <MESSAGE value="Shorten fund action button labels&#10;&#10;Updated `goal_add_funds` and `goal_take_out` string resources to &quot;Add&quot; and &quot;Take out&quot; respectively." />
     <MESSAGE value="Add wallet management views and add-to-wallet feature&#10;&#10;- Added `WalletsPage` to display active wallets, individual wallet balances, and total wallet balance.&#10;- Added `AddToWalletPage` to allow users to add or schedule funds to a selected wallet with a posting date and memo.&#10;- Updated `HomePage` and `MainActivity` to support navigation and routing for wallet screens.&#10;- Added string resources and layouts for wallet management workflows." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add wallet management views and add-to-wallet feature&#10;&#10;- Added `WalletsPage` to display active wallets, individual wallet balances, and total wallet balance.&#10;- Added `AddToWalletPage` to allow users to add or schedule funds to a selected wallet with a posting date and memo.&#10;- Updated `HomePage` and `MainActivity` to support navigation and routing for wallet screens.&#10;- Added string resources and layouts for wallet management workflows." />
+    <MESSAGE value="Fix spacing in wallet memo hint text&#10;&#10;Added a space after the colon in `wallet_memo_hint` string resource." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix spacing in wallet memo hint text&#10;&#10;Added a space after the colon in `wallet_memo_hint` string resource." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
